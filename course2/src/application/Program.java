@@ -20,7 +20,7 @@ public class Program {
 		int n = sc.nextInt();
 		Product[] vect = new Product[n]; // cria um vetor de N produtos
 		
-		for (int i = 0; i < n; i++) {// for para percorrer o vetor 
+		for (int i = 0; i < vect.length; i++) {// for para percorrer o vetor 
 			sc.nextLine();// nextLine vazio 
 			String name = sc.nextLine();
 			double price = sc.nextDouble();
@@ -28,10 +28,10 @@ public class Program {
 		}
 		
 		double sum = 0.0;// variável para armazenar o valor da soma
-		for(int i = 0; i < n; i++) {
+		for(int i = 0; i < vect.length; i++) {
 			sum += vect[i].getPrice();// acessa o vetor na posição i e pego somente o valor do preço.
 		}
-		double avg = sum / n;// calcula a média
+		double avg = sum / vect.length;// calcula a média
 		
 		System.out.printf("AVERAGE PRICE = %.2f%n", avg);
 		
